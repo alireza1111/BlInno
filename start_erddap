@@ -1,0 +1,7 @@
+sudo docker run \
+  -v /home/erddap/erddap-docker/resources/setup.xml:/usr/local/tomcat/content/erddap/setup.xml \
+  -v /home/erddap/erddap-docker/resources/datasets.xml:/usr/local/tomcat/content/erddap/datasets.xml \
+  -v /home/erddap/erddap-docker/resources/SMHI-logotype.png:/usr/local/tomcat/content/erddap/images/smhi.png \
+  -v /home/erddap/bigParentDirectory:/erddapData \
+  -v /home/erddap/data:/our-datasets \
+  -d -p 8080:8080 axiom/docker-erddap
